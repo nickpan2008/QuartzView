@@ -1,12 +1,12 @@
 server:
-    port: 8080
+    port: 8888
 
 spring:
     datasource:
         name: SpringBootQuartz
-        url: jdbc:mysql://127.0.0.1:3306/springbootquartz?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=UTF-8
-        username: root
-        password: root
+        url: jdbc:mysql://rm-wz9u9c1sr5x0d90k3ho.mysql.rds.aliyuncs.com:3306/springbootquartz?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        username: nickpan2008
+        password: Z514181+
         # 使用Druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
