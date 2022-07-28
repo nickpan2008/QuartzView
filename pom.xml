@@ -6,7 +6,8 @@
     <groupId>com.example</groupId>
     <artifactId>QuartzView</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+
+    <packaging>war</packaging>
 
     <name>QuartzView</name>
     <description>Demo project for Spring Boot</description>
@@ -137,6 +138,15 @@
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
         </dependency>
+
+
+        <!-- 排除嵌入式的tomcat -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -145,6 +155,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+<!--                <version>2.22.2</version>-->
                 <!--忽略测试启动类 -->
                 <configuration>
                     <skip>true</skip>
@@ -154,11 +165,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+<!--                <version>2.5.2</version>-->
             </plugin>
             <!-- 指定JDK编译版本 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+<!--                <version>3.8.0</version>-->
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
